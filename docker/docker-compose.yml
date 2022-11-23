@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  java:
+    dockerfile: ./java/Dockerfile
+    context: ../
+    tty: true
+    volumes:
+    - .:/prj
+    environment:
+    - HOST_UID
+    - HOST_GID
+    - CONTAINER_USER
+    - CONTAINER_GROUP
+    # entrypoint:
+    # - /usr/local/bin/entrypoint.sh
